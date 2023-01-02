@@ -1,0 +1,7 @@
+{
+  "name": "leftRight",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
