@@ -1,27 +1,58 @@
-#container {
-  text-align: center;
+ion-content {
+  --overflow: hidden;
+  --background: #1b446e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.taptostart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 
+  h1 {
+    color: white;
+    font-size: 50px;
+  }
+}
+
+.decision {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  top: 0;
   left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  background: #1b2433;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.direction {
+  position: absolute;
+  font-size: 90px;
+  bottom: 10px;
+  font-weight: 800;
+  color: #a9bfc5;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.left {
+  transform: rotate(180deg);
 }
 
-#container a {
-  text-decoration: none;
+/* Fade-In Effect */
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s linear;
 }
+/* Fade-Out Effect */
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.3s, opacity 0.3s linear;
+}
+
+

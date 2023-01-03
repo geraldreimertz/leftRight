@@ -1,20 +1,11 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content [fullscreen]="true" (click)="newCycle()">
+  <div class="taptostart">
+    <h1>Tap to start</h1>
+  </div>
+  <div class="decision" [ngClass]="{'visible': visible,  'hidden': !visible}">
+    <svg *ngIf="left" class="left" xmlns="http://www.w3.org/2000/svg" width="95%" viewBox="0 0 24 24" fill="#a9bfc5"><path d="M13 7v-6l11 11-11 11v-6h-13v-10z"/></svg>
+    <svg *ngIf="!left" xmlns="http://www.w3.org/2000/svg" width="95%" viewBox="0 0 24 24" fill="#a9bfc5"><path d="M13 7v-6l11 11-11 11v-6h-13v-10z"/></svg>
+    <span *ngIf="left" class="direction">LEFT</span>
+    <span *ngIf="!left" class="direction">RIGHT</span>
   </div>
 </ion-content>
